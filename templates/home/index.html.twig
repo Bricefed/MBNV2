@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil - MeublesByNicolas.fr{% endblock %}
+
+{% block body %}
+    
+    <div class="fakeNavbar"></div>
+    
+    <header class="text-center m-5">
+        <img src="{{asset('imgs/logos/logo.svg')}}" alt="Logo MBN" class="logoHome mt-5 mb-5">
+        <h1>Fabricant de meubles sur mesure en Haute-Garonne</h1>
+    </header>
+
+    <article class="artHome">
+        <div class="blockH2">
+            <div class="traitH2"></div>
+                <h2 class="text-center">Pourquoi choisir un meuble sur mesure ?</h2>
+            <div class="traitH2"></div>
+        </div>
+    </article>
+
+{% endblock %}
