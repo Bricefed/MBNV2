@@ -31,4 +31,44 @@
     .navActiv{
         border-bottom: 0px;
     }
+    .pictNicolas{
+        height: 70%;
+        left: 5%;
+    }
+    .textQuiRight > .menu-icon{
+	transform: translateY(-140px)!important;
+    }
+}
+@media screen and (max-width: 767px)
+{
+    /* CROQUIS */
+    .croquis1{
+        width: 100%;
+    }
+    .croquis2{
+        width: 100%;
+    }
+    .croquis3{
+        width: 100%;
+    }
+
+    /* Texte page d'accueil */
+    .investissementMedias{
+        flex-direction: column-reverse;
+    }
+
+    .pictNicolas{
+        width: 250px;
+        height: auto;
+        top: 20%;
+        left: 5%;
+    }
+    .textQuiRight > .menu-icon{
+        margin: 0 auto;
+        transform: translateY(-250px)!important;
+    }
+    .textQuiRight > .menu-icon.isOpened{
+        opacity: .3;
+    }
+
 }
