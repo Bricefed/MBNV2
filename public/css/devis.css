@@ -1,0 +1,18 @@
+.sectionDevis{
+    background-color: #FAFAFA;
+}
+.sectionDevis > h2{
+    text-transform: uppercase;
+}
+.formShadow{
+    border: none;
+    border-radius: 10px;
+    box-shadow: 3px 4px 5px #D3D3D3;
+}
+.formMessage{
+    min-height: 150px!important;
+    max-height: 250px!important;
+}
+.obligation{
+    color: #B4B4B4;
+}

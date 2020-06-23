@@ -3,5 +3,37 @@
 {% block title %}Hello DevisController!{% endblock %}
 
 {% block body %}
-    DEVIS
+    <section class="sectionDevis">
+        <h2 class="text-center p-5">Faire une demande de devis gratuit</h2>
+
+        {{ form_start(form) }}
+
+        <div class="container">
+            <div class="row">
+                <div class="col-4">{{ form_row(form.prenom, {'label' : ' ', 'attr': {'placeholder': "Prénom", 'class': "formShadow"}}) }}</div>
+                <div class="col-4">{{ form_row(form.nom, {'label' : ' ', 'attr': {'placeholder': 'Nom', 'class': 'formShadow'}}) }}</div>
+                <div class="col-4">{{ form_row(form.departement, {'label' : ' ', 'attr': {'style': 'color: #6C757D', 'class': 'formShadow'}}) }}</div>
+            </div>
+            <div class="row">
+                <div class="col-12">{{ form_row(form.email, {'label' : ' ', 'attr': {'placeholder': "Email", 'class': 'formShadow'}}) }}</div>
+            </div>
+            <div class="row">
+                <div class="col-4">{{ form_row(form.meubles, {'label' : ' ', 'attr': {'style': 'color: #6C757D', 'class': 'formShadow'}}) }}</div>
+                <div class="col-4">{{ form_row(form.longueur, {'label' : ' ', 'attr': {'placeholder': 'Longueur (cm)', 'class': 'formShadow'}}) }}</div>
+                <div class="col-4">{{ form_row(form.largeur, {'label' : ' ', 'attr': {'placeholder': 'Largeur (cm)', 'class': 'formShadow'}}) }}</div>
+            </div>
+            <div class="row">
+                <div class="col-6">{{ form_row(form.typeBois, {'label' : ' ', 'attr': {'style': 'color: #6C757D', 'class': 'formShadow'}}) }}</div>
+                <div class="col-6">{{ form_row(form.budget, {'label' : ' ', 'attr': {'style': 'color: #6C757D', 'class': 'formShadow'}}) }}</div>
+            </div>
+            <div class="row">
+                <div class="col-12">{{ form_row(form.message, {'label' : ' ', 'attr': {'placeholder': 'Votre message', 'class': 'formShadow formMessage'}}) }}</div>
+            </div>
+        </div>
+        <p class="container obligation">* Tous les champs sont obligatoire</p>
+        <div class="text-center mt-5"><button type="submit" class="btn btn-perso">Envoyer la demande de devis</button></div>
+
+        {{ form_end(form) }}
+
+    </section>
 {% endblock %}
