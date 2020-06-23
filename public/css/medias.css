@@ -38,6 +38,23 @@
     .textQuiRight > .menu-icon{
 	transform: translateY(-140px)!important;
     }
+
+    .headCard{
+        flex-direction: column;
+    }
+    .pictUser{
+        margin: 0 auto 20px 0!important;
+    }
+    .presUser{
+        text-align: center;
+    }
+    .textCard{
+        font-size: .9em;
+        line-height: 1.5em;
+    }
+    .cardAvis{
+        padding: 30px;
+    }
 }
 @media screen and (max-width: 767px)
 {
@@ -70,5 +87,4 @@
     .textQuiRight > .menu-icon.isOpened{
         opacity: .3;
     }
-
 }

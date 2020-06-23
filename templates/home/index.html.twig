@@ -32,7 +32,7 @@
    
         <div class="blockInvestissement espacePara mt-5">
             <h3 class="mb-5">Considérez l’acquisition d’un mobilier comme un investissement !</h3>
-            <div style="display: flex; align-items: center" class="investissementMedias">
+            <div class="investissementMedias">
                 <div>
                     <p>Si nous prenons l’exemple de l’immobilier, lorsque vous investissez dans la pierre, il est fort probable que vous recherchiez le meilleur produit, qui correspond parfaitement à vos critères et à vos besoins.</p>
                     <p>C’est exactement la même chose pour vos meubles !</p>
@@ -71,27 +71,25 @@
         </div>
 
         <div class="blockTexteQui mb-5">
-            <div class="container">
-                <div class="row">
-                    <div class="textQuiLeft col-sm-12 col-md-6 mb-3">
-                        <p>Je suis Nicolas, trentenaire, habitant de la région Toulousaine.</p>
-                        <p>Depuis 3 ans, je fabrique en tant qu’amateur, des meubles sur-mesure pour mes clients.</p>
-                        <p>Au fil du temps, j’ai développé ma technique et j’ose de plus en plus de créations audacieuses. Je laisse parler ma créativité pour fabriquer des meubles originaux, authentiques et surtout uniques.</p>
-                        <p>Certaines de mes créations se distinguent notamment par les conceptions en bi-matières que je propose, alliant la résine epoxy à des planches de bois, pour un style moderne, original et élégant.</p>
-                        <p>Je suis donc à l’écoute de vos besoins et de vos souhaits et je peux vous proposer des meubles à la mesure de vos envies.</p>
+            <div class="row">
+                <div class="textQuiLeft col-sm-12 col-md-6 mb-3">
+                    <p>Je suis Nicolas, trentenaire, habitant de la région Toulousaine.</p>
+                    <p>Depuis 3 ans, je fabrique en tant qu’amateur, des meubles sur-mesure pour mes clients.</p>
+                    <p>Au fil du temps, j’ai développé ma technique et j’ose de plus en plus de créations audacieuses. Je laisse parler ma créativité pour fabriquer des meubles originaux, authentiques et surtout uniques.</p>
+                    <p>Certaines de mes créations se distinguent notamment par les conceptions en bi-matières que je propose, alliant la résine epoxy à des planches de bois, pour un style moderne, original et élégant.</p>
+                    <p>Je suis donc à l’écoute de vos besoins et de vos souhaits et je peux vous proposer des meubles à la mesure de vos envies.</p>
+                </div>
+                <div class="textQuiRight col-sm-12 col-md-6 mb-3">
+                    <div class="paraOpa">
+                        <p>Quand je suis dans mon atelier, j’oublie tous les soucis du quotidien, c’est un vrai exutoire qui me permet de me changer les idées après une longue journée de travail.</p>
+                        <p>J’adore laisser libre cours à mon imagination !</p>
+                        <p>J’aime exploiter les caractéristiques de chaque planche de bois pour faire naître un meuble qui ne pourra  jamais être reproduit à l’identique.</p>
+                        <p>Ainsi, à chaque fois que je termine une création, j’ai toujours ce même sentiment de satisfaction d’avoir réussi à créer un objet différent, authentique et unique.</p>
+                        <p>Aujourd’hui, je fabrique des tables en différents matériaux mais aussi des tables basses et des commodes et des planches à découper.</p>
                     </div>
-                    <div class="textQuiRight col-sm-12 col-md-6 mb-3">
-                        <div class="paraOpa">
-                            <p>Quand je suis dans mon atelier, j’oublie tous les soucis du quotidien, c’est un vrai exutoire qui me permet de me changer les idées après une longue journée de travail.</p>
-                            <p>J’adore laisser libre cours à mon imagination !</p>
-                            <p>J’aime exploiter les caractéristiques de chaque planche de bois pour faire naître un meuble qui ne pourra  jamais être reproduit à l’identique.</p>
-                            <p>Ainsi, à chaque fois que je termine une création, j’ai toujours ce même sentiment de satisfaction d’avoir réussi à créer un objet différent, authentique et unique.</p>
-                            <p>Aujourd’hui, je fabrique des tables en différents matériaux mais aussi des tables basses et des commodes et des planches à découper.</p>
-                        </div>
-                        <img src="{{asset('imgs/photos/nicolas.jpg')}}" alt="Photo d'identité" class="pictNicolas">
-                        <div class="menu-icon">
-		                    <span></span>
-	                    </div>
+                    <img src="{{asset('imgs/photos/nicolas.jpg')}}" alt="Photo d'identité" class="pictNicolas">
+                    <div class="menu-icon">
+                        <span></span>
                     </div>
                 </div>
             </div>
@@ -99,7 +97,8 @@
 
     </section>
 
-    <section class="essencesBois p-5" style="background-color: #EBEBEB; ">
+    <section class="essencesBois p-5">
+        
         <div class="blockH2 mb-5">
             <div class="traitH2"></div>
                 <h2 class="text-center">Essences de bois utilisées</h2>
@@ -107,63 +106,88 @@
         </div>
 
         <div class="container">
-            <div class="autoplay">
-                <div style="position: relative;">
-                    <img src="{{asset('imgs/essences/chene.png')}}" alt="Chêne" class="imgEssences img-fluid p-3" style="border-radius: 50px; height: 500px;">
-                    <p style="
-                    transform: translateX(-50%) translateY(-50%);
-                    position: absolute; 
-                    top: 51%; left: 50%;
-                    font-size: 2.5em;
-                    font-family: 'Roboto', sans-serif;
-                    text-transform: uppercase;
-                    color: white;
-                    text-shadow: 0 3px 6px grey;
-                    ">Chêne</p>
-                </div>
-                <div style="position: relative;">
-                    <img src="{{asset('imgs/essences/chene.png')}}" alt="Chêne" class="imgEssences img-fluid p-3" style="border-radius: 50px; height: 500px;">
-                    <p style="
-                    transform: translateX(-50%) translateY(-50%);
-                    position: absolute; 
-                    top: 51%; left: 50%;
-                    font-size: 2.5em;
-                    font-family: 'Roboto', sans-serif;
-                    text-transform: uppercase;
-                    color: white;
-                    text-shadow: 0 3px 6px grey;
-                    ">Chêne</p>
-                </div>
-                <div style="position: relative;">
-                    <img src="{{asset('imgs/essences/chene.png')}}" alt="Chêne" class="imgEssences img-fluid p-3" style="border-radius: 50px; height: 500px;">
-                    <p style="
-                    transform: translateX(-50%) translateY(-50%);
-                    position: absolute; 
-                    top: 51%; left: 50%;
-                    font-size: 2.5em;
-                    font-family: 'Roboto', sans-serif;
-                    text-transform: uppercase;
-                    color: white;
-                    text-shadow: 0 3px 6px grey;
-                    ">Chêne</p>
-                </div>
-                <div style="position: relative;">
-                    <img src="{{asset('imgs/essences/chene.png')}}" alt="Chêne" class="imgEssences img-fluid p-3" style="border-radius: 50px; height: 500px;">
-                    <p style="
-                    transform: translateX(-50%) translateY(-50%);
-                    position: absolute; 
-                    top: 51%; left: 50%;
-                    font-size: 2.5em;
-                    font-family: 'Roboto', sans-serif;
-                    text-transform: uppercase;
-                    color: white;
-                    text-shadow: 0 3px 6px grey;
-                    ">Chêne</p>
-                </div>
 
+            <div class="autoplay">
+                <div class="imgBoisTitre">
+                    <img src="{{asset('imgs/essences/chene.png')}}" alt="Chêne" class="imgEssences img-fluid p-3">
+                    <p>Chêne</p>
+                </div>
+                <div class="imgBoisTitre">
+                    <img src="{{asset('imgs/essences/sapin.png')}}" alt="Sapin" class="imgEssences img-fluid p-3">
+                    <p>Sapin</p>
+                </div>
+                <div class="imgBoisTitre">
+                    <img src="{{asset('imgs/essences/ormeaux.png')}}" alt="Ormeaux" class="imgEssences img-fluid p-3">
+                    <p>Ormeaux</p>
+                </div>
+                <div class="imgBoisTitre">
+                    <img src="{{asset('imgs/essences/olivier.png')}}" alt="Olivier" class="imgEssences img-fluid p-3">
+                    <p>Olivier</p>
+                </div>
+                <div class="imgBoisTitre">
+                    <img src="{{asset('imgs/essences/pin.png')}}" alt="Pin" class="imgEssences img-fluid p-3">
+                    <p>Pin</p>
+                </div>
             </div>
         </div>
     
+    </section>
+    
+    <section class="avisClientHome p-5">
+    
+        <div class="blockH2 mb-5">
+            <div class="traitH2"></div>
+                <h2 class="text-center">Mes clients en parlent !</h2>
+            <div class="traitH2"></div>
+        </div>
+
+        <div class="container">
+            <div class="row d-flex justify-content-around">
+                
+                <div class="col-sm-10 col-md-5 m-1 cardAvis">
+                    <div class="headCard">
+                        <div>
+                            <img src="{{asset('imgs/photos/user1.jpg')}}" alt="Utilisateur" class="img-fluid mr-4 pictUser">
+                        </div>
+                        <div class="presUser">
+                            <p>Rick Martin</p>
+                            <p class="btn">Chêne</p>
+                            <p>Magnifique !</p>
+                        </div>
+                    </div>
+                    <div class="textCard mt-4">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Ipsum, consectetur quod natus ducimus temporibus voluptatibus ipsa dolores libero tempora id tenetur aspernatur unde repellendus ut, necessitatibus praesentium.
+                        Labore, recusandae quia.</p>
+                    </div>
+                    <img src="{{asset('imgs/meubles/table2.jpg')}}" alt="Table" class="img-fluid mt-3">
+                </div>
+            
+                <div class="col-sm-10 col-md-5 m-1 cardAvis">
+                    <div class="headCard">
+                        <div>
+                            <img src="{{asset('imgs/photos/user1.jpg')}}" alt="Utilisateur" class="img-fluid mr-4 pictUser">
+                        </div>
+                        <div class="presUser">
+                            <p>Rick Martin</p>
+                            <p class="btn">Chêne</p>
+                            <p>Magnifique !</p>
+                        </div>
+                    </div>
+                    <div class="textCard mt-4">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Ipsum, consectetur quod natus ducimus temporibus voluptatibus ipsa dolores libero tempora id tenetur aspernatur unde repellendus ut, necessitatibus praesentium.
+                        Labore, recusandae quia.</p>
+                    </div>
+                    <img src="{{asset('imgs/meubles/table1.jpg')}}" alt="Table" class="img-fluid mt-3">
+                </div>
+
+            </div>
+            <div class="text-center m-5">
+                <a href="#" class="btn btn-perso">Voir tous les retours clients</a>
+            </div>
+        </div>
+
     </section>
 
 {% endblock %}

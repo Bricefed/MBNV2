@@ -19,3 +19,21 @@ html{
 /*
 font-family: 'Roboto', sans-serif;
 */
+
+.backFonduFooter{
+    width: 100vw;
+    height: 100px;
+    color: red;
+    background: linear-gradient(#FAFAFA, #FFF);
+}
+.croquisFooter{
+    width: 44%;
+}
+.logoFooter{
+    text-align: center;
+    width: 150px;
+}
+.footerOrga{
+    display: flex;
+    align-items: center;
+}

@@ -60,6 +60,11 @@ h3{
     border-radius: 50px;
 }
 
+
+.investissementMedias{
+    display: flex;
+    align-items: center;
+}
 .quiSuis-je{
     background-color: #FAFAFA;
     width: 100vw;
@@ -81,7 +86,68 @@ h3{
     transition: opacity .5s;
 }
 
+.essencesBois{
+    background-color: #EBEBEB;
+}
 
+.imgBoisTitre{
+    position: relative;
+}
+.imgBoisTitre > img{
+    border-radius: 50px;
+    height: 500px;
+}
+.imgBoisTitre > p{
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute; 
+    top: 51%;
+    left: 50%;
+    font-size: 2.5em;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0 3px 6px grey;
+}
 .imgEssences{
     width: 500px;
 }
+
+.textCard{
+    color: #707070;
+    line-height: 2em;
+}
+
+.cardAvis{
+    background-color: white;
+    padding: 50px 63px;
+    border-radius: 20px;
+}
+.headCard{
+    display: flex;
+    align-items: center;
+}
+
+.avisClientHome{
+    background-color: #FAFAFA;
+}
+
+.pictUser{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+.presUser > p:nth-child(1){
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    font-size: 1.3em;
+}
+.presUser > p:nth-child(2){
+    border: 1px solid #707070;
+    cursor: default!important;
+    border-radius: 40px;
+}
+.presUser > p:nth-child(3){
+    color: #D07A18;
+    font-weight: bold;
+}
+
