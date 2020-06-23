@@ -10,6 +10,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     
         {# LIEN CAROUSEL #}
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@ 1.8.1/slick/slick.css"/>
@@ -22,9 +23,12 @@
         <link rel="stylesheet" href="{{asset('css/medias.css')}}">
         <link rel="stylesheet" href="{{asset('css/croixQui.css')}}">
         <link rel="stylesheet" href="{{asset('css/croixAvis.css')}}">
+        <link rel="stylesheet" href="{{asset('css/meubles.css')}}">
 
     </head>
     <body>
+
+        <div class="fakeNavbar"></div>
 
         <nav class="navbar fixed-top navbar-expand-lg navbar-light">
 
@@ -39,15 +43,15 @@
                 
                 <ul class="navbar-nav m-auto">
                     <li class="nav-item">
-                        <a class="nav-link navActiv" href="{{path('home')}}">Accueil</a>
+                        <a class="nav-link {% if nav_activ is defined and nav_activ == 'home' %}navActiv{% endif %}" href="{{path('home')}}">Accueil</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle {% if nav_activ is defined and nav_activ == 'meubles' %}navActiv{% endif %}" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Meubles
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">MEUBLE 1</a>
-                            <a class="dropdown-item" href="#">MEUBLE 2</a>
+                            <a class="dropdown-item" href="{{path('meubles')}}#table">Tables à manger</a>
+                            <a class="dropdown-item" href="{{path('meubles')}}#test">MEUBLE 2</a>
                             <a class="dropdown-item" href="#">MEUBLE 3</a>
                         </div>
                     </li>

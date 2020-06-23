@@ -87,4 +87,11 @@
     .textQuiRight > .menu-icon.isOpened{
         opacity: .3;
     }
+    .logoFooter{
+        width: 100px;
+    }
+    footer > div > div > p{
+        font-size: .8em;
+        margin-top: 20px;
+    }
 }

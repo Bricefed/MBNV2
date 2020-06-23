@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Meubles - MeublesByNicolas.fr -{% endblock %}
+
+{% block body %}
+
+    <section class="sectionMeubles">
+        <h2 class="text-center p-5">Quelques-unes de mes réalisations</h2>
+        <div class="container">
+            <h3 id="table" class="text-left titreCatego">Tables à manger</h3>
+            <div class="traitMeubles"></div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 mt-2">
+                    <div class="cardMeubles">
+                        <div class="imgCardMeubles">
+                            <img src="{{asset('imgs/meubles/table1.jpg')}}" alt="Table TITRE" class="img-fluid">
+                        </div>
+                        <div class="textCardMeubles">
+                            <p class="titreCardMeuble">Edyna</p>
+                            <div>
+                                <p class="btn btn-perso2">Chêne</p>
+                                <p class="price">1200 <i class="fa fa-eur" aria-hidden="true"></i></p>
+                            </div>
+                            <p class="descro-iptionCardMeubles">Incidunt earum nisi quae itaque sit unde dignissimos? Dolorem, aut. Iure debitis dolorum molestias ullam quos architecto dolore fugit blanditiis.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 mt-2">
+                    <div class="cardMeubles">
+                        <div class="imgCardMeubles">
+                            <img src="{{asset('imgs/meubles/table2.jpg')}}" alt="Table TITRE" class="img-fluid">
+                        </div>
+                        <div class="textCardMeubles">
+                            <p class="titreCardMeuble">Edyna</p>
+                            <div>
+                                <p class="btn btn-perso2">Chêne</p>
+                                <p class="price">1200 <i class="fa fa-eur" aria-hidden="true"></i></p>
+                            </div>
+                            <p class="descro-iptionCardMeubles">Incidunt earum nisi quae itaque sit unde dignissimos? Dolorem, aut. Iure debitis dolorum molestias ullam quos architecto dolore fugit blanditiis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
