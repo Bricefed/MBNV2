@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Avis clients - MeublesByNicolas.fr{% endblock %}
+
+{% block body %}
+    <section class="avisClientsPage">
+        <h2 class="text-center p-5">Retour des personnes qui m'ont fait confiance</h2>
+
+        <div class="container ">
+            <div class="row d-flex justify-content-around">
+                <div class="col-sm-10 col-md-5 m-1 cardAvis">
+                    <div class="headCard">
+                        <div>
+                            <img src="{{asset('imgs/photos/user1.jpg')}}" alt="Utilisateur" class="img-fluid mr-4 pictUser">
+                        </div>
+                        <div class="presUser">
+                            <p>Rick Martin</p>
+                            <p class="btn btn-perso2">Chêne</p>
+                            <p>Magnifique !</p>
+                        </div>
+                    </div>
+                    <div class="textCard mt-4">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Ipsum, consectetur quod natus ducimus temporibus voluptatibus ipsa dolores libero tempora id tenetur aspernatur unde repellendus ut, necessitatibus praesentium.
+                        Labore, recusandae quia.</p>
+                    </div>
+                    <img src="{{asset('imgs/meubles/table2.jpg')}}" alt="Table" class="img-fluid mt-3">
+                </div>
+            
+                <div class="col-sm-10 col-md-5 m-1 cardAvis">
+                    <div class="headCard">
+                        <div>
+                            <img src="{{asset('imgs/photos/user1.jpg')}}" alt="Utilisateur" class="img-fluid mr-4 pictUser">
+                        </div>
+                        <div class="presUser">
+                            <p>Rick Martin</p>
+                            <p class="btn btn-perso2">Chêne</p>
+                            <p>Magnifique !</p>
+                        </div>
+                    </div>
+                    <div class="textCard mt-4">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Ipsum, consectetur quod natus ducimus temporibus voluptatibus ipsa dolores libero tempora id tenetur aspernatur unde repellendus ut, necessitatibus praesentium.
+                        Labore, recusandae quia.</p>
+                    </div>
+                    <img src="{{asset('imgs/meubles/table1.jpg')}}" alt="Table" class="img-fluid mt-3">
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

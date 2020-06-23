@@ -1,0 +1,6 @@
+.avisClientsPage{
+    background-color: #FAFAFA;
+}
+.avisClientsPage > h2{
+    text-transform: uppercase;
+}

@@ -24,6 +24,7 @@
         <link rel="stylesheet" href="{{asset('css/croixQui.css')}}">
         <link rel="stylesheet" href="{{asset('css/croixAvis.css')}}">
         <link rel="stylesheet" href="{{asset('css/meubles.css')}}">
+        <link rel="stylesheet" href="{{asset('css/avisClients.css')}}">
 
     </head>
     <body>
@@ -46,7 +47,7 @@
                         <a class="nav-link {% if nav_activ is defined and nav_activ == 'home' %}navActiv{% endif %}" href="{{path('home')}}">Accueil</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle {% if nav_activ is defined and nav_activ == 'meubles' %}navActiv{% endif %}" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle {% if nav_activ is defined and nav_activ == 'meubles' %}navActiv{% endif %}" href="{{path('meubles')}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Meubles
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -56,10 +57,10 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Avis clients</a>
+                        <a class="nav-link {% if nav_activ is defined and nav_activ == 'avisClients' %}navActiv{% endif %}" href="{{path('avis')}}">Avis clients</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Devis</a>
+                        <a class="nav-link {% if nav_activ is defined and nav_activ == 'devis' %}navActiv{% endif %}" href="{{path('devis')}}">Devis</a>
                     </li>
                 </ul>
 

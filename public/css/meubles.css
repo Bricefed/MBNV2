@@ -1,7 +1,7 @@
 .sectionMeubles{
     background-color: #FAFAFA;
 }
-.sectionMeubles > div > h2{
+.sectionMeubles > h2{
     text-transform: uppercase;
 }
 .titreCatego{
