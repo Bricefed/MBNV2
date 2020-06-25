@@ -1,0 +1,25 @@
+{% block body %}
+
+<p>Bonjour Nicolas !</p>
+<p>Tu as reçus une nouvelle demande de devis sur le site <a href="meublesbynicolas.fr">meublesbynicolas.fr</a> !</p>
+<hr>
+
+<p><b>Le client :</b></p>
+<ul>
+    <li><u>Prénom :</u> {{ devis.prenom }}</li>
+    <li><u>Nom :</u> {{ devis.nom }}</li>
+    <li><u>Email :</u> {{ devis.email }}</li>
+    <li><u>Meuble :</u> {{ devis.meubles }}</li>
+    <li><u>Département :</u> {{ devis.departement }}</li>
+    <li><u>Type de bois :</u> {{ devis.typeBois }}</li>
+    <li><u>Longueur :</u> {{ devis.longueur }}cm</li>
+    <li><u>Largeur :</u> {{ devis.largeur }}cm</li>
+    <li><u>Budget :</u> {{ devis.budget }}</li>
+</ul>
+<br>
+<p><b>Message :</b></p>
+{{ devis.message | raw }}
+<br>
+<a href="meublesbynicolas.fr">meublesbynicolas.fr</a>
+
+{% endblock %}

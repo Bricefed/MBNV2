@@ -1,0 +1,35 @@
+.backgroundConx{
+    background-color: #FAFAFA;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.blockConex{
+    background-color: white;
+    padding: 50px;
+}
+.blockConex > h3{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.8em;
+    margin: 40px;
+}
+.formConx{
+    border: none;
+    border-radius: 10px;
+    box-shadow: 3px 4px 5px #D3D3D3;
+    margin-bottom: 40px;
+    font-size: 1.2em;
+    padding: 20px;
+}
+.mdpForgent{
+    color: #707070;
+    opacity: .5;
+    text-decoration: underline;
+    transition: opacity .3s;
+}
+.mdpForgent:hover{
+    color: #707070;
+    opacity: 1;
+}

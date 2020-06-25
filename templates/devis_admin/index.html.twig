@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Devis clients - Meublesbynicolas.fr -{% endblock %}
+
+{% block body %}
+    devis client
+
+        <div>
+        MAIL :
+        {% for dev in devis %}
+            <p>
+                <a href="{{path('mail', {'id': dev.id})}}">{{dev.nom}} {{dev.prenom}}</a>
+                
+            </p>
+        {% endfor %}
+    </div>
+{% endblock %}

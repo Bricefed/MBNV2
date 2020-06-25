@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion - Meublesbynicolas.com -{% endblock %}
+
+{% block body %}
+<form method="post">
+    {% for alert in app.flashes('success') %}
+        <div class="alert alert-success">
+            {{alert}}
+        </div>
+    {% endfor %}
+    {% for alert in app.flashes('mdpModif') %}
+        <div class="alert alert-success">
+            {{alert}}
+        </div>
+    {% endfor %}
+
+    <div class="backgroundConx">
+        <div class="container blockConex">
+            <h3>Se connecter</h3>
+            
+            <div class="row">
+                <div class="col-6">
+                    <input type="email" name="email" id="inputEmail" class="form-control formConx" placeholder="Email" required autofocus>
+                </div>
+
+                <div class="col-6">
+                    <input type="password" name="password" id="inputPassword" class="form-control formConx" placeholder="Mot de passe" required>            
+                </div>
+
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+            </div>
+            
+            <div class="checkbox mb-3">
+                <a href="{{path('forget')}}" class="mdpForgent">Mot de passe oublier ?</a>
+            </div>
+            
+            <div class="text-center">
+                <button class="btn btn-perso" type="submit">Se connecter</button>
+            </div>
+        </div>
+    </div>
+
+    {#
+        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+        See https://symfony.com/doc/current/security/remember_me.html
+
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" name="_remember_me"> Remember me
+            </label>
+        </div>
+    #}
+</form>
+{% endblock %}

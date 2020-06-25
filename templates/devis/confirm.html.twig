@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Message de confirmation - MeublesByNicolas -{% endblock %}
+
+{% block body %}
+    <section class="sectionDevis">
+        <h2 class="text-center p-5">Votre demande à bien été envoyée !</h2>
+        <div class="container p-5 text-center blockConfirm">
+            <p>Votre demande sera traitée dans un délai de 48h, je m’y engage.</p>
+            <p>En attendant, vous avez reçu un email récapitulatif de votre demande personnelle.</p>
+            <p>Merci pour votre temps 🙏 </p>
+        </div>
+        <div class="text-center">
+            <a href="{{path('meubles')}}" class="btn btn-perso m-5">Retourner voir les meubles</a>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mot de passe oublier - Meublesbynicolas.com -{% endblock %}
+
+{% block body %}
+    {% for alert in app.flashes('mailInconnue') %}
+        <div class="alert alert-danger">
+            {{alert}}
+        </div>
+    {% endfor %}
+    {{ form_start(emailForgetform)}}
+
+    <div class="backgroundConx">
+        <div class="container blockConex">
+            <h3>Mot de passe oublier</h3>
+            
+            <div class="row">
+                <div class="col-12">
+                    {{ form_row(emailForgetform.email, {'label' : ' ', 'attr': {'placeholder': "Email", 'class': "formShadow form-control formConx"}})}}
+                    <div class="text-center">
+                        {{ form_row(emailForgetform.envoyer, {'label' : 'Envoyer un mail', 'attr': {'class': "btn btn-perso"}})}}
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    {{ form_end(emailForgetform)}}
+
+{% endblock %}

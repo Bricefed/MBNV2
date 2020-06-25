@@ -1,0 +1,29 @@
+{% block body %}
+
+<p>Cher(e) {{ devis.prenom }} {{ devis.nom }},</p>
+<p>Merci pour votre  demande de devis, Elle va être étudier par mes soins. Vous trouverez ci-dessous, un récapitulatif de votre demande détaillé.</p>
+<hr>
+<br>
+<p><b>Synthèse de votre demande :</b></p>
+<ul>
+    <li><u>Meuble :</u> {{ devis.meubles }}</li>
+    <li><u>Département :</u> {{ devis.departement }}</li>
+    <li><u>Type de bois :</u> {{ devis.typeBois }}</li>
+    <li><u>Longueur :</u> {{ devis.longueur }}cm</li>
+    <li><u>Largeur :</u> {{ devis.largeur }}cm</li>
+    <li><u>Budget :</u> {{ devis.budget }}</li>
+</ul>
+<br>
+<p><b>Votre message :</b></p>
+{{ devis.message | raw }}
+<br><br><br>
+<p><b>Retrouvez-nous sur les réseaux sociaux :</b></p>
+<a href="#">Facebook</a>
+<br>
+<a href="#">Instagram</a>
+<br>
+<a href="#">Etsy</a>
+<br>
+<a href="meublesbynicolas.fr">meublesbynicolas.fr</a>
+
+{% endblock %}

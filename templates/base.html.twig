@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         
         {# BOOTSRAP #}
@@ -26,6 +26,8 @@
         <link rel="stylesheet" href="{{asset('css/meubles.css')}}">
         <link rel="stylesheet" href="{{asset('css/avisClients.css')}}">
         <link rel="stylesheet" href="{{asset('css/devis.css')}}">
+        <link rel="stylesheet" href="{{asset('css/confirmDevis.css')}}">
+        <link rel="stylesheet" href="{{asset('css/conx.css')}}">
 
     </head>
     <body>
@@ -42,7 +44,7 @@
 
             <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
 
-                
+            {% if not app.user %}
                 <ul class="navbar-nav m-auto">
                     <li class="nav-item">
                         <a class="nav-link {% if nav_activ is defined and nav_activ == 'home' %}navActiv{% endif %}" href="{{path('home')}}">Accueil</a>
@@ -63,13 +65,42 @@
                     <li class="nav-item">
                         <a class="nav-link {% if nav_activ is defined and nav_activ == 'devis' %}navActiv{% endif %}" href="{{path('devis')}}">Devis</a>
                     </li>
+                    {% if app.user %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_logout') }}">Déconexion</a>
+                    </li>
+                    {% endif %}
                 </ul>
 
                 <div class="logoRS">
-                    <a href="#"><img src="{{asset('imgs/r-s/facebook.svg')}}" alt="Facebook"></a>
-                    <a href="#"><img src="{{asset('imgs/r-s/instagram.svg')}}" alt="Instagram"></a>
-                    <a href="#"><img src="{{asset('imgs/r-s/etsy.svg')}}" alt="Etsy"></a>
+                    <a href="https://www.facebook.com/meublesbynicolas/" target="_blank"><img src="{{asset('imgs/r-s/facebook.svg')}}" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/meublesbynicolas/" target="_blank"><img src="{{asset('imgs/r-s/instagram.svg')}}" alt="Instagram"></a>
+                    <a href="https://www.etsy.com/fr/shop/MeublesByNicolas" target="_blank"><img src="{{asset('imgs/r-s/etsy.svg')}}" alt="Etsy"></a>
                 </div>
+            {% endif %}
+            {% if app.user %}
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Admin</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle {% if nav_activ is defined and nav_activ == 'meubles' %}navActiv{% endif %}" href="{{path('meubles')}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Meubles
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{path('meubles')}}#table">Tables à manger</a>
+                            <a class="dropdown-item" href="{{path('meubles')}}#test">MEUBLE 2</a>
+                            <a class="dropdown-item" href="#">MEUBLE 3</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if nav_activ is defined and nav_activ == 'devisClient' %}navActiv{% endif %}" href="{{path('devisClients')}}">Devis clients</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_logout') }}">Déconexion <i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            {% endif %}
 
             </div>
 
@@ -84,10 +115,16 @@
                 </div>
                 <div class="text-center">
                     <img src="{{asset('imgs/logos/logo.svg')}}" alt="Logo MBN" class="logoFooter">
-                    <p>
+                    <p class="paraFooter">
                         Copyright ©</br>
-                        Tous droits réservés à</br>
-                        meublesbynicolas.com
+                        Tous droits réservés 
+                        {% if not app.user %}
+                        <a href="{{path('login')}}" class="loginCache">à</a>
+                        {% else %}
+                        à
+                        {% endif %}
+                        </br>
+                        meublesbynicolas.fr
                     </p>
                 </div>
             </div>

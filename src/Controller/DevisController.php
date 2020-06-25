@@ -3,8 +3,11 @@
 namespace App\Controller;
 
 use App\Entity\Devis;
-use Doctrine\Common\Persistence\ObjectManager;
+use Symfony\Component\Mime\Email;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Mailer\MailerInterface;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -17,7 +20,7 @@ class DevisController extends AbstractController
     /**
      * @Route("/devis", name="devis")
      */
-    public function index(Request $request, ObjectManager $manager)
+    public function index(Request $request, EntityManagerInterface $manager, MailerInterface $mailer)
     {
         $devis = new Devis();
 
@@ -25,9 +28,6 @@ class DevisController extends AbstractController
                     ->add('prenom', TextType::class)
                     ->add('nom', TextType::class)
                     ->add('departement', ChoiceType::class,[
-                        'attr' => [
-                            'value' => 'test'
-                        ],
                         'choices' => [
                             'Département' => null,
                             '01' => '01',
@@ -163,21 +163,50 @@ class DevisController extends AbstractController
                             'Plus de 2000€' => '< 2000€'
                         ]
                     ])
-                    ->add('message')
+                    ->add('message', CKEditorType::class)
                     ->getForm();
 
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
-            $manager->persist($devis);
-            $manager->flush();
+            $devis = $form->getData();
+            
+            $emailClient = (new Email())
+                ->from('meublesbynicolas@gmail.com')
+                ->to($devis->getEmail())
+                ->subject('Demande de devis')
+                ->text('Demande de devis')
+                ->html($this->renderView(
+                    'mail_devis/index.html.twig', compact('devis')
+                )
+            );
+            $mailer->send($emailClient);
 
-            return $this->redirectToRoute('home');
+
+            $emailAdmin = (new Email())
+                ->from($devis->getEmail())
+                ->to('napofedoubrice@gmail.com')
+                ->subject('Nouvelle demande de devis')
+                ->text('Nouvelle demande de devis')
+                ->html($this->renderView(
+                    'mail_devis/index2.html.twig', compact('devis')
+                )
+            );
+            $mailer->send($emailAdmin);
+
+            return $this->redirectToRoute('confirmDevis');
         }
 
         return $this->render('devis/index.html.twig', [
             "nav_activ" => 'devis',
             "form" => $form->createView()
         ]);
+    }
+    
+    /**
+     * @Route("/confirm", name="confirmDevis")
+     */
+    public function messageConfirm(){
+        return $this->render('devis/confirm.html.twig');
     }
 }

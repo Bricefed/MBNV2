@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello DevisController!{% endblock %}
+{% block title %}Devis - MeublesByNicolas.fr -{% endblock %}
 
 {% block body %}
     <section class="sectionDevis">
@@ -10,23 +10,24 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-4">{{ form_row(form.prenom, {'label' : ' ', 'attr': {'placeholder': "Prénom", 'class': "formShadow"}}) }}</div>
-                <div class="col-4">{{ form_row(form.nom, {'label' : ' ', 'attr': {'placeholder': 'Nom', 'class': 'formShadow'}}) }}</div>
-                <div class="col-4">{{ form_row(form.departement, {'label' : ' ', 'attr': {'style': 'color: #6C757D', 'class': 'formShadow'}}) }}</div>
+                <div class="col-sm-6 col-md-4">{{ form_row(form.prenom, {'label' : ' ', 'attr': {'placeholder': "Prénom", 'class': "formShadow"}}) }}</div>
+                <div class="col-sm-6 col-md-4">{{ form_row(form.nom, {'label' : ' ', 'attr': {'placeholder': 'Nom', 'class': 'formShadow'}}) }}</div>
+                <div class="col-sm-12 col-md-4">{{ form_row(form.departement, {'label' : ' ', 'attr': {'style': 'color: #6C757D', 'class': 'formShadow'}}) }}</div>
             </div>
             <div class="row">
                 <div class="col-12">{{ form_row(form.email, {'label' : ' ', 'attr': {'placeholder': "Email", 'class': 'formShadow'}}) }}</div>
             </div>
             <div class="row">
-                <div class="col-4">{{ form_row(form.meubles, {'label' : ' ', 'attr': {'style': 'color: #6C757D', 'class': 'formShadow'}}) }}</div>
-                <div class="col-4">{{ form_row(form.longueur, {'label' : ' ', 'attr': {'placeholder': 'Longueur (cm)', 'class': 'formShadow'}}) }}</div>
-                <div class="col-4">{{ form_row(form.largeur, {'label' : ' ', 'attr': {'placeholder': 'Largeur (cm)', 'class': 'formShadow'}}) }}</div>
+                <div class="col-sm-12 col-md-4">{{ form_row(form.meubles, {'label' : ' ', 'attr': {'style': 'color: #6C757D', 'class': 'formShadow'}}) }}</div>
+                <div class="col-sm-6 col-md-4">{{ form_row(form.longueur, {'label' : ' ', 'attr': {'placeholder': 'Longueur (cm)', 'class': 'formShadow'}}) }}</div>
+                <div class="col-sm-6 col-md-4">{{ form_row(form.largeur, {'label' : ' ', 'attr': {'placeholder': 'Largeur (cm)', 'class': 'formShadow'}}) }}</div>
             </div>
             <div class="row">
-                <div class="col-6">{{ form_row(form.typeBois, {'label' : ' ', 'attr': {'style': 'color: #6C757D', 'class': 'formShadow'}}) }}</div>
-                <div class="col-6">{{ form_row(form.budget, {'label' : ' ', 'attr': {'style': 'color: #6C757D', 'class': 'formShadow'}}) }}</div>
+                <div class="col-sm-12 col-md-6">{{ form_row(form.typeBois, {'label' : ' ', 'attr': {'style': 'color: #6C757D', 'class': 'formShadow'}}) }}</div>
+                <div class="col-sm-12 col-md-6">{{ form_row(form.budget, {'label' : ' ', 'attr': {'style': 'color: #6C757D', 'class': 'formShadow'}}) }}</div>
             </div>
             <div class="row">
+                <p class="container mt-5" style="font-weight: bold; color: #6C757D"=>Laisser un message :</p>
                 <div class="col-12">{{ form_row(form.message, {'label' : ' ', 'attr': {'placeholder': 'Votre message', 'class': 'formShadow formMessage'}}) }}</div>
             </div>
         </div>

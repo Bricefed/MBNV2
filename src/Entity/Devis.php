@@ -4,7 +4,7 @@ namespace App\Entity;
 
 use App\Repository\DevisRepository;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraint as Assert;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=DevisRepository::class)
@@ -19,51 +19,66 @@ class Devis
     private $id;
 
     /**
+     * @Assert\NotBlank(message="Ne peux pas être vide")
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(min=2, max=25, minMessage="Au minimum 2 caractères", maxMessage="Au maximum 25 caractères")
      */
     private $prenom;
 
     /**
+     * @Assert\NotBlank(message="Ne peux pas être vide")
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(min=2, max=25, minMessage="Au minimum 2 caractères", maxMessage="Au maximum 25 caractères")
      */
     private $nom;
 
     /**
+     * @Assert\NotBlank(message="Sélectioner un département")
      * @ORM\Column(type="string", length=255)
      */
     private $departement;
 
     /**
+     * @Assert\NotBlank(message="Entrez un email valide")
+     * @Assert\Email(message = "email non valide")
      * @ORM\Column(type="string", length=255)
      */
     private $email;
 
     /**
+     * @Assert\NotBlank(message="Sélectioner un meuble")
      * @ORM\Column(type="string", length=255)
      */
     private $meubles;
 
     /**
+     * @Assert\NotBlank(message="Entrez une valeur (chiffre entier)")
      * @ORM\Column(type="integer")
+     * @Assert\Range(min=10, max=350, notInRangeMessage="Vous devez mesurer entre {{ min }}cm et {{ max }}cm",)
      */
     private $longueur;
 
     /**
+     * @Assert\NotBlank(message="Entrez une valeur (nombre entier)")
      * @ORM\Column(type="integer")
+     * @Assert\Range(min=10, max=250, notInRangeMessage="Vous devez mesurer entre {{ min }}cm et {{ max }}cm",)
      */
     private $largeur;
 
     /**
+     * @Assert\NotBlank(message="Sélectioner un type de bois")
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $typeBois;
 
     /**
+     * @Assert\NotBlank(message="Sélectioner un budget")
      * @ORM\Column(type="string", length=255)
      */
     private $budget;
 
     /**
+     * @Assert\NotBlank(message="Laisser un message")
      * @ORM\Column(type="text")
      */
     private $message;
